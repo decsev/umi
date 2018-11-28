@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cross-env APP_TYPE=site umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "lint": "eslint --ext .js src mock tests",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "cssnano": "^4.1.7",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^0.1.5",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "postcss-aspect-ratio-mini": "^0.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-px-to-viewport": "^0.0.3",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1",
+    "umi": "^2.1.2",
+    "umi-plugin-react": "^1.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cross-env": "^5.2.0",
+    "jsonp": "^0.2.1",
+    "loadsh": "^0.0.3",
+    "node-sass": "^4.10.0",
+    "react-transition-group": "^2.5.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.26.1"
+  }
+}

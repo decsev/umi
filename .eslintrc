@@ -1,0 +1,6 @@
+{
+  "extends": "eslint-config-umi",
+  "globals": {
+    "APP_TYPE": true
+  }
+}
