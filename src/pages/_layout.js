@@ -15,13 +15,13 @@ class Layout extends PureComponent {
     const { location, match, children, layout } = this.props;
     return (
       <>
-        <ul>
+        {/* <ul>
           <li><Link to={`${match.url}index`}>index</Link></li>
           <li><Link to={`${match.url}index/9`}>index/tt</Link></li>
           <li><Link to={`${match.url}user`}>user</Link></li>
           <li><Link to={`${match.url}404`}>404</Link></li>
         </ul>
-        <hr />
+        <hr /> */}
         <div className="transitionWrapper">
           <TransitionGroup>
             <CSSTransition key={location.pathname} classNames={layout.action} timeout={300}>
