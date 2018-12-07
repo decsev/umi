@@ -16,7 +16,7 @@ class Index extends React.Component {
     const swiperProps = {
       containerClassName: "w-100 h-300",
       direction: 'horizontal', // vertical, horizontal
-      loop: true, // false, true
+      loop: false, // false, true
       needPagination: true, // false, true
       swiperSlides: [
         { img: 'https://m-static.ppmoney.com/Public/Img/d3ef12fa-23f1-452f-baad-2648db97f0df.jpg', url: 'http://www.baidu.com' },

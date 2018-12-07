@@ -8,7 +8,11 @@ const plugins = [
     antd: true,
     dva: true,
     dynamicImport: false,
-    title: 'umi',
+    fastClick: true,
+    title: {
+      defaultTitle: '默认标题',
+      format: '{parent}{separator}{current}',
+    },
     dll: false,
     routes: {
       exclude: [],
@@ -19,6 +23,7 @@ const plugins = [
 
 export default {
   plugins,
+  publicPath: '/public',
   targets: {
     ie: 11,
     IOS: 8,

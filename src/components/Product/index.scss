@@ -1,0 +1,29 @@
+.pro-item{
+  background: #fff;
+  width: 362px;
+  .pro-img{
+    width: 362px;
+    height: 362px;
+  }
+  .pro-title{
+    padding: 15px;
+    font-size: 20px;
+    color: #666666;
+  }
+  .pro-bottom{
+    display: flex;
+    padding: 0 15px 15px;
+    .price{
+      flex-grow: 1;
+      font-size: 28px;
+      font-weight: bold;
+      color: #d94035;
+    }
+    .pro-car{
+      img{
+        width: 41px;
+        height: 41px;
+      }
+    }
+  }
+}

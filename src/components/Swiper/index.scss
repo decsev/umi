@@ -1,4 +1,4 @@
-@for $i from 1 through 20{
+@for $i from 1 through 25{
   .h-#{$i*20}{
     height: $i*20px
   }

@@ -1,0 +1,31 @@
+.nav-container{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1001;
+  height: 98px;
+  background: #fff;
+  .nav-item-wp{
+    padding: 17px 0 13px;
+    display: flex;
+    justify-content: space-around;
+    .nav-item{
+      text-align: center;
+      line-height: 1;
+      p{
+        margin-bottom: 0;
+        font-size: 20px;
+        color: #333333;
+        padding-top: 8px;
+      }
+      .iconfont{
+        font-size: 40px;
+      }
+      &.current .iconfont{
+        color: #db584e;
+        font-weight: bold;
+      }
+    }
+  }
+}

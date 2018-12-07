@@ -133,6 +133,63 @@ const deepClone = (values) => {
   throw new Error('Unable to copy values! Its type isn\'t supported.');
 };
 
+// 点击复制
+/*const copyTextToClipboard = (text, callback, msg) => {
+  const successMsg = msg || '复制成功';
+  const browser = navigator.userAgent;
+  let msg = '若点击复制分享链接无效，请长按内容手动复制';
+  if (browser.match(/(iPhone|iPod|iPad);?/i)) {
+    let divArea = document.createElement("div");
+    divArea.style.position = 'fixed';
+    divArea.style.top = 0;
+    divArea.style.left = 0;
+    divArea.style.width = '2em';
+    divArea.style.height = '2em';
+    divArea.style.padding = 0;
+    divArea.style.border = 'none';
+    divArea.style.outline = 'none';
+    divArea.style.boxShadow = 'none';
+    divArea.style.opacity = 0;
+    divArea.innerHTML = text;
+    document.body.appendChild(divArea);
+    const range = document.createRange();
+    range.selectNode(divArea);
+    window.getSelection().removeAllRanges(); // 清空之前选中
+    window.getSelection().addRange(range);
+    try {
+      msg = document.execCommand('copy') ? successMsg : msg;
+    } catch (err) { }
+    setTimeout(() => { document.body.removeChild(divArea); }, 1000)
+
+  } else if (browser.indexOf('Android') > -1) {
+    let textArea = document.createElement("textarea");
+    textArea.style.position = 'fixed';
+    textArea.style.top = 0;
+    textArea.style.left = 0;
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = 0;
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+    textArea.innerHTML = text;
+    textArea.readonly = "readonly";
+    document.body.appendChild(textArea);
+
+    textArea.select();
+    try {
+      msg = document.execCommand('copy') ? successMsg : msg;
+    } catch (err) { }
+    document.body.removeChild(textArea);
+  }
+  if (typeof callback === "function") {
+    callback(msg);
+  } else {
+    alert(msg);
+  }
+};*/
+
 module.exports = {
   config,
   request,
@@ -140,5 +197,6 @@ module.exports = {
   queryURL,
   queryArray,
   arrayToTree,
-  deepClone
+  deepClone,
+  //copyTextToClipboard
 }

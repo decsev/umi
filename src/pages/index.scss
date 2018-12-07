@@ -47,6 +47,9 @@
 }
 .transitionWrapper {
   position: relative;
+  &>div{
+    height: 100%;
+  }
 }
 
 .push-enter,

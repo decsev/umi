@@ -1,3 +1,4 @@
+@import "../iconfont/iconfont.css";
 @import "index";
 *{
   margin:0;
@@ -6,6 +7,8 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
+  outline: 0;
+  word-break: break-all;
 }
 html{
   height: 100%;
@@ -13,7 +16,7 @@ html{
 body{
   font-family: "Microsoft YaHei","微软雅黑",tahoma,arial,'Hiragino Sans GB',sans-serif;
   height: 100%;
-  font-size: 12px;
+  font-size: 20px;
 }
 @for $i from 1 through 20{
   .mt-#{$i*5}{

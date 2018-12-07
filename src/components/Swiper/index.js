@@ -8,18 +8,16 @@ class Index extends PureComponent {
     this.state = {};
   }
   componentDidMount() {
-    console.log(this.props)
-    const { direction, loop } = this.props;
+    console.log('666', this.props)
+    const { swiperPro } = this.props;
     const myswiper = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
       },
-      direction,
-      loop
+      ...swiperPro
     });
   }
   go(url) {
-    console.log(123, url)
     const reg = /^(http:\/\/|https:\/\/).*$/g;
     if (url === '') {
       return;
@@ -32,7 +30,6 @@ class Index extends PureComponent {
   }
   render() {
     const { swiperSlides } = this.props;
-    console.log('thistrewterwprops', this.props);
     const swiperSlidesHtml = swiperSlides.map((item, index) => {
       return (<div key={index} className="swiper-slide">
         {item.img && <img src={item.img} className="swiper-img" onClick={() => { this.go(item.url); }} />}
